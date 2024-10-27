@@ -71,7 +71,8 @@ if discr >= 0.0:
         d = (-b + math.sqrt(discr))/(2*a)
     if d >= 0.0:
         l_d = [d*d_l_x + c_l_x, d*d_l_y + c_l_y, d*d_l_z + c_l_z]
-    # print results
-    print(l_d[0]) # x-component of intersection point, may or may not exist
-    print(l_d[1]) # y-component of intersection point, may or may not exist
-    print(l_d[2]) # z-component of intersection point, may or may not exist
+        
+# print results
+print(l_d[0]) # x-component of intersection point
+print(l_d[1]) # y-component of intersection point
+print(l_d[2]) # z-component of intersection point
