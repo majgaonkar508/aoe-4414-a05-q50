@@ -51,6 +51,11 @@ else:
     )
     exit()
 
+# create l_d, d_l, and c_l vectors
+l_d = [float('nan'), float('nan'), float('nan')]
+d_l = [d_l_x, d_l_y, d_l_z] 
+c_l = [c_l_x, c_l_y, c_l_z] 
+
 # matches quadratic form
 a = d_l_x**2 + d_l_y**2 + d_l_z**2/(1 - E_E**2)
 b = 2*(d_l_x*c_l_x + d_l_y*c_l_y + (d_l_z*c_l_z)/(1 - E_E**2))
@@ -66,11 +71,7 @@ if discr >= 0.0:
         d = (-b + math.sqrt(discr))/(2*a)
     if d >= 0.0:
         l_d = [d*d_l_x + c_l_x, d*d_l_y + c_l_y, d*d_l_z + c_l_z]
-        # print results
-        print(l_d[0]) # x-component of intersection point
-        print(l_d[1]) # y-component of intersection point
-        print(l_d[2]) # z-component of intersection point
-
-
-        
-
+    # print results
+    print(l_d[0]) # x-component of intersection point
+    print(l_d[1]) # y-component of intersection point
+    print(l_d[2]) # z-component of intersection point
